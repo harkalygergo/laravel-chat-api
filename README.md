@@ -1,5 +1,18 @@
 # Laravel chat API
-###### v2025.10.06.2
+###### v2025.10.06.3
+
+---
+
+## Installation and usage
+
+- install dependencies:
+  - `composer install`
+  - `npm install && npm run build` (if needed)
+- set up `.env` file (copy from `.env.example` and modify)
+- run migrations:
+  - `php artisan migrate`
+- start the server:
+  - `php artisan serve`
 
 ---
 
