@@ -1,5 +1,5 @@
 # Laravel chat API
-###### v2025.10.06.10
+###### v2025.10.06.11
 
 ---
 
@@ -54,4 +54,5 @@ tiszta kódszerkezetre és tesztelhető megoldásra.
 
 - A teljes API kódja egy Laravel projektben
 - Adatbázismigrációk, modellek, kontrollerek, validációk stb.
-- Példák a tesztekre (`Feature Test`) a `tests/Feature` mappában README.md fájl, amely tartalmazza a telepítési és használati útmutatót (opcionális, de javasolt)
+- Példák a tesztekre (`Feature Test`) a `tests/Feature` mappában
+- README.md fájl, amely tartalmazza a telepítési és használati útmutatót (opcionális, de javasolt)
