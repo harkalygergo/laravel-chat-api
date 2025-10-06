@@ -1,5 +1,5 @@
 # Laravel chat API
-###### v2025.10.06.17
+###### v2025.10.06.18
 
 ---
 
@@ -13,6 +13,9 @@
   - `php artisan migrate`
 - start the server:
   - `php artisan serve`
+- run tests (optional):
+    - `php artisan test`
+- reach site at `http://localhost:8000`
 
 ---
 
