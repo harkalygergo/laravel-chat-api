@@ -1,5 +1,5 @@
 # Laravel chat API
-###### v2025.10.06.18
+###### v2025.10.06.19
 
 ---
 
@@ -16,6 +16,7 @@
 - run tests (optional):
     - `php artisan test`
 - reach site at `http://localhost:8000`
+- login and registration under `http://localhost:8000/auth`
 
 ---
 
