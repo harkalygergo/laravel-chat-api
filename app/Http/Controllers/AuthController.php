@@ -40,8 +40,17 @@ class AuthController extends Controller
             return response()->json(['message' => 'Email not verified'], 403);
         }
 
-        $token = $request->user()->createToken('authToken')->plainTextToken;
+        $request->session()->regenerate();
 
-        return response()->json(['token' => $token]);
+        $user = Auth::user(); // or Auth::guard('web')->user();
+        Auth::guard('web')->login($user);
+
+        $token = $user->createToken('token')->plainTextToken;
+
+        return response()->json([
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+            'user' => $user,
+        ]);
     }
 }

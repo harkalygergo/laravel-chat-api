@@ -32,4 +32,20 @@ class FriendController extends Controller
 
         return response()->json(['message' => 'Friend added']);
     }
+
+    public function list(Request $request)
+    {
+        $users = User::where('id', '!=', $request->user()->id)
+            ->whereNotIn('id', $request->user()->friends->pluck('id'))
+            ->whereNotNull('email_verified_at')
+            ->when($request->search, fn($q) => $q->where('name', 'like', "%{$request->search}%"))
+            ->paginate(10);
+
+        // get logged in user friends
+        $friends = $request->user()->friends;
+
+        // pass friends and users to view
+        return view('friends.index', compact('users', 'friends'));
+    }
+
 }

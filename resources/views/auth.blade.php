@@ -36,7 +36,8 @@
     <div class="card">
         <div class="card-header">Login</div>
         <div class="card-body">
-            <form id="loginForm">
+            <form id="loginForm" method="POST" action="{{ route('loginHandle') }}">
+                @csrf
                 <div class="mb-3">
                     <input type="email" class="form-control" name="email" placeholder="Email" required>
                 </div>
@@ -50,62 +51,5 @@
     </div>
 </div>
 
-<script>
-    const apiBase = '/api';
-
-    document.getElementById('registerForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const form = e.target;
-        const data = {
-            name: form.name.value,
-            email: form.email.value,
-            password: form.password.value,
-            password_confirmation: form.password_confirmation.value
-        };
-
-        try {
-            const res = await fetch(`${apiBase}/register`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-
-            const json = await res.json();
-            document.getElementById('registerMessage').innerHTML =
-                res.ok
-                    ? `<div class="alert alert-success">${json.message}</div>`
-                    : `<div class="alert alert-danger">${json.message || Object.values(json.errors).join('<br>')}</div>`;
-        } catch (err) {
-            console.error(err);
-        }
-    });
-
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const form = e.target;
-        const data = {
-            email: form.email.value,
-            password: form.password.value
-        };
-
-        try {
-            const res = await fetch(`${apiBase}/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-
-            const json = await res.json();
-            document.getElementById('loginMessage').innerHTML =
-                res.ok
-                    ? `<div class="alert alert-success">Login successful. Token: <code>${json.token}</code></div>`
-                    : `<div class="alert alert-danger">${json.message}</div>`;
-        } catch (err) {
-            console.error(err);
-        }
-    });
-</script>
 </body>
 </html>
