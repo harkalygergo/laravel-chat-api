@@ -1,11 +1,25 @@
 # 💬 LaraTalk
-###### v2025.10.09.5
+###### v2025.10.09.7
+
+![LaraTalk homepae](laratalk.png?raw=true "LaraTalk homepage")
 
 ---
 
 ## Description
 
 LaraTalk is a Laravel-based chat web application as a test project. Visitor can register and login, after login, can search and add friends. Friends can write message to each other.
+
+More planned functions:
+
+- multilanguage support
+- real-time chat with websockets
+- user profile with avatar
+- user status (online, offline, busy, etc.)
+- group chat
+- file sharing (images, documents, etc.)
+- message reactions (like, love, etc.)
+- notifications (new message, friend request, etc.)
+- admin panel (user management, reports, etc.)
 
 ---
 
