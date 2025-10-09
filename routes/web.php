@@ -37,6 +37,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/message/{recipient}', [MessageController::class, 'send']);
     Route::get('/messages/{user}', [MessageController::class, 'conversation']);
+    // Chat UI page
+    Route::view('/chat', 'messages.index')->name('chat');
 });
 
 // Logout route for web UI

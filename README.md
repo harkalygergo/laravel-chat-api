@@ -1,5 +1,5 @@
 # 💬 LaraTalk
-###### v2025.10.09.7
+###### v2025.10.09.8
 
 ![LaraTalk homepae](laratalk.png?raw=true "LaraTalk homepage")
 
@@ -11,6 +11,8 @@ LaraTalk is a Laravel-based chat web application as a test project. Visitor can 
 
 More planned functions:
 
+- new page to let users change data (e.g.: password)
+- fully redesign for elegant and professional UX/UI
 - multilanguage support
 - real-time chat with websockets
 - user profile with avatar

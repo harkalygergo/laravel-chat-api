@@ -10,6 +10,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('friends') }}">Search friends</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('chat') }}">Send message</a>
+                    </li>
                 @endauth
             </ul>
             <div class="ms-auto d-flex gap-2 align-items-center">
