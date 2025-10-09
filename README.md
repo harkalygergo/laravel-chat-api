@@ -1,5 +1,5 @@
 # 💬 LaraTalk
-###### v2025.10.09.4
+###### v2025.10.09.5
 
 ---
 
@@ -12,10 +12,11 @@ LaraTalk is a Laravel-based chat web application as a test project. Visitor can 
 ## Installation and usage
 
 - clone this repository
+- generate APP_KEY: `php artisan key:generate`
+- set up `.env` file (copy from `.env.example` and modify)
 - install dependencies:
   - `composer install`
   - `npm install && npm run build` (if needed)
-- set up `.env` file (copy from `.env.example` and modify)
 - run migrations:
   - `php artisan migrate`
 - start the server:
