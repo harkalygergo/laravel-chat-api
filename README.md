@@ -1,10 +1,17 @@
-# Laravel chat API
-###### v2025.10.08.2
+# 💬 LaraTalk
+###### v2025.10.09.4
+
+---
+
+## Description
+
+LaraTalk is a Laravel-based chat web application as a test project. Visitor can register and login, after login, can search and add friends. Friends can write message to each other.
 
 ---
 
 ## Installation and usage
 
+- clone this repository
 - install dependencies:
   - `composer install`
   - `npm install && npm run build` (if needed)
