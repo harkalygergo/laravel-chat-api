@@ -11,6 +11,7 @@
                 @endguest
 
                 @auth
+                    <span class="navbar-text text-light me-2">Logged in as {{ auth()->user()->name }}</span>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="btn btn-outline-light">Logout</button>
