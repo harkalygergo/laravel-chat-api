@@ -5,7 +5,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
-            <div class="ms-auto d-flex gap-2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('friends') }}">Search friends</a>
+                    </li>
+                @endauth
+            </ul>
+            <div class="ms-auto d-flex gap-2 align-items-center">
                 @guest
                     <a href="{{ route('login') }}" class="btn btn-outline-light">Login / Register</a>
                 @endguest
