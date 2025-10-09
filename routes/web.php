@@ -38,3 +38,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/message/{recipient}', [MessageController::class, 'send']);
     Route::get('/messages/{user}', [MessageController::class, 'conversation']);
 });
+
+// Logout route for web UI
+Route::post('/logout', function (\Illuminate\Http\Request $request) {
+    \Illuminate\Support\Facades\Auth::guard('web')->logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');
